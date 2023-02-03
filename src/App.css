@@ -1,0 +1,11 @@
+.navbar-content{
+  padding:20px 40px 20px 40px;
+}
+.task-done{
+  text-decoration: line-through;
+  color: #6c757d;
+  font-style: italic;
+}
+.footer{
+  background-color: #003361;
+}
