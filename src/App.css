@@ -9,3 +9,13 @@
 .footer{
   background-color: #003361;
 }
+
+.title-page {
+  /* font-family: 'Product Sans Medium', sans-serif; */
+  font-size: 2em;
+}
+
+.subtitle-page {
+  /* font-family: 'Product Sans Medium', sans-serif; */
+  font-size: 1.5em;
+}

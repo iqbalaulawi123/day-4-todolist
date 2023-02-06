@@ -1,15 +1,15 @@
-import Navbar from "../component/Navbar/navbar";
-import Content from "./content";
-import Footer from "./footer";
+import Navbar from "../component/Navbar";
 
-export default function Index(){
+
+export default function Index({children}){
     return (
         <>
-        <Navbar/>
-        <div className="content-wrapper d-flex" style={{minHeight: "85vh"}}>
-            <Content/>
-        </div>
-        <Footer/>
+        <section id="main-section" style={{width:"100%",minHeight:"100vh"}} className="bg-light">
+                <Navbar></Navbar>
+                <div className="content-wrapper p-md-5 p-3">
+                    {children}
+                </div>
+        </section>
         </>
     )
 }
