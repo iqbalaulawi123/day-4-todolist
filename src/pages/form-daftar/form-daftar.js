@@ -17,13 +17,18 @@ export default function FormDaftar(){
         feedback : "",
     })
     const { register, handleSubmit, watch, formState: { errors,touchedFields }, reset } = useForm();
-
+    const handleChange = (event) => {
+        formDataSet({
+            ...formData,
+            [event.target.name]: event.target.value
+        });
+    };
     const resetFormHandler = () =>{
         reset();
     } 
     const submitFormHandler = val =>{
         formDataSet({
-            nama : val.nama_lengkap,
+            nama: val.nama_lengkap,
             email : val.email,
             nohp : val.nohp,
             background : val.background,
@@ -31,8 +36,9 @@ export default function FormDaftar(){
             file_commit : val.file_commit,
             feedback : val.feedback,
         })
-        alert("Form kamu sudah berhasil disubmit "+JSON.stringify(formData));
-    } 
+        alert("Form kamu sudah berhasil disubmit "+JSON.stringify(val));
+        resetFormHandler();
+    }
     return (
         <>
             <div className="title-page mb-3 mt-3 fw-bold">
@@ -104,16 +110,14 @@ export default function FormDaftar(){
                     <div className="form-group mb-3">
                         <label>Kelas yang dipilih</label>
                         <select className="form-control" name="kelas" {...register("kelas",{
-                                    required : {value:true, message:"Kelas harus diisi"},
+                                    required : {value:true, message:"Kelas harus dipilih"},
                                 })
                             }
                             >
                             <option value="">-- Pilih Kelas --</option>
-                            <option value="FS">Full Stack Developer</option>
-                            <option value="QA">Quality Assurance</option>
-                            <option value="BE">Backend Developer</option>
-                            <option value="FE">Frontend Developer</option>
-                            <option value="UIUX">UI/UX Designer</option>
+                            <option value="GOLANG">Coding Backend with GOLANG</option>
+                            <option value="REACTJS">Coding Frontend with ReactJS</option>
+                            <option value="FS">Fullstack Developer</option>
                         </select>
                         <small className="form-text text-danger">
                             {touchedFields?.background && errors?.background && errors.background?.message}
@@ -122,7 +126,7 @@ export default function FormDaftar(){
                     <div className="form-group mb-3">
                         <label >Upload surat kesungguhan</label><br/>
                         <input {...register("file_commit",{
-                                    required : {value:true, message:"Kelas harus diisi"},
+                                    required : {value:true, message:"surat kesungguhan harus diisi"},
                                 })
                             } name="file_commit" type="file" className="form-control-file"  />
                         <br/>
