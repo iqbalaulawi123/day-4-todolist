@@ -6,7 +6,7 @@ import TaskList from "../../component/TaskList/tasklist";
 import {deleteTaskList, submitTaskList, checkTaskList} from "../../store/reducer-task"; 
 
 
-export default function TodolistRedux(){
+export default function TodolistReduxPersist(){
     const [formtask,formtaskSet] = useState('');
     const [todolist,todolistSet] = useState([]);
     // const [formdata,formdataSet] = useState([]);
@@ -38,7 +38,7 @@ export default function TodolistRedux(){
             <div className="title-page mb-3 mt-3 fw-bold">
                 Todolist
             </div>
-            <h5 className="text-muted mb-3">Dengan menggunakan Redux</h5>
+            <h5 className="text-muted mb-3">Dengan menggunakan Redux Persist</h5>
             <div className="card mx-auto my-auto bg-white shadow-sm rounded my-2">
                 {/* <div className="card-header p-3 bg-white">
                     <h4 className="fw-bold">To-do list</h4>

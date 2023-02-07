@@ -7,6 +7,8 @@ export default function Home(){
             <div className="card mx-auto my-auto bg-white shadow-sm rounded my-2">
                 <div className="card-body">
                 Selamat Datang.
+                Berikut ini adalah daftar task kamu :
+                (Redux-Persist)
                 </div>
             </div>
         </>
