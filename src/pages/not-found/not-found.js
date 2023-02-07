@@ -10,7 +10,7 @@ export default function NotFound(){
                 <div className="card-body">
                     Page yang anda tuju tidak ditemukan
                     <br/>
-                    <NavLink to="/Home" >
+                    <NavLink to="/" >
                         Kembali
                     </NavLink>
                 </div>

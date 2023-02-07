@@ -21,6 +21,11 @@ export default function Navbar(){
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item">
+                    <NavLink to="/" className={({isActive})=>isActive ? "nav-link active":"nav-link"}>
+                        Home
+                    </NavLink>
+                    </li>
+                    <li className="nav-item">
                     <NavLink to="/about" className={({isActive})=>isActive ? "nav-link active":"nav-link"}>
                         About
                     </NavLink>
