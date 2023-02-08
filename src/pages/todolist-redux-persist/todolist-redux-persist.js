@@ -8,7 +8,7 @@ import {deleteTaskList, submitTaskList, checkTaskList} from "../../store/reducer
 
 export default function TodolistReduxPersist(){
     const [formtask,formtaskSet] = useState('');
-    const [todolist,todolistSet] = useState([]);
+    // const [todolist,todolistSet] = useState([]);
     // const [formdata,formdataSet] = useState([]);
     
     // dataTasks yg dilempar ke fungsi map
@@ -24,9 +24,7 @@ export default function TodolistReduxPersist(){
 	}
     const checkListHandler = (id) => {
         console.log("checklist id :"+id)
-        todolistSet(prev => {
-            dispatch(checkTaskList(id))
-        });
+        dispatch(checkTaskList(id))
     }
     const deleteTaskHandler = (id) => {
         console.log("deleting id :"+id)

@@ -11,7 +11,10 @@ export const FetchApi = (config) => {
             const {data: dataFromAPI} = await axios ({
                 baseURL: '',
                 url: `${config?.path}`,
-                method: config?.method || 'get'
+                method: config?.method || 'get',
+                headers: {
+                    'x-hasura-admin-secret': 'xMIUjvyGbGF9Pgwp3LJ4UYuvebON55OsekCN2HkPaBx7RrSXMEmZ240YGwQttjLZ'
+                }
             });
             dataSet(dataFromAPI);
             isLoadingSet(false);
@@ -20,6 +23,5 @@ export const FetchApi = (config) => {
         }
     }
     // const setLoading = (val) => isLoadingSet(val);
-
     return {data,isLoading};
 }

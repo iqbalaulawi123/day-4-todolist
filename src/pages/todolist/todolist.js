@@ -72,7 +72,7 @@ export default function Todolist(){
                                 <TaskList
                                 key={i}
                                 id={todolist.id}
-                                className={(todolist.showBulkActions === true ? 'task-done' : '')}
+                                className={(todolist.completed === true ? 'task-done' : '')}
                                 title={todolist.title}
                                 completed={todolist.completed}
                                 checkListHandler = {checkListHandler}
