@@ -9,7 +9,7 @@ export const ReducerTask = createSlice({
         /**
          * action : data yang dilempar
          * state ya state awal
-         */
+        */
         submitTaskList: (state ,action) => {
             let sample = [action.payload,...state.data];
             state.data = sample;
