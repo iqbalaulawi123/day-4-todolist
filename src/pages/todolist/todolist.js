@@ -70,7 +70,7 @@ export default function Todolist(){
                         <div className="task-list-contain d-grid gap-2" style={{maxHeight:"50vh",overflowY:"auto"}}>
                             {todolist.length > 0 && todolist.map((todolist, i) => (
                                 <TaskList
-                                key={i}
+                                key={todolist.id}
                                 id={todolist.id}
                                 className={(todolist.completed === true ? 'task-done' : '')}
                                 title={todolist.title}

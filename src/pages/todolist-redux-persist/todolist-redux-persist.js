@@ -54,7 +54,7 @@ export default function TodolistReduxPersist(){
                         <div className="task-list-contain d-grid gap-2" style={{maxHeight:"50vh",overflowY:"auto"}}>
                             {dataTasks.length > 0 && dataTasks.map((todolist, i) => (
                                 <TaskList
-                                key={i}
+                                key={todolist.id}
                                 id={todolist.id}
                                 className={(dataTasks.completed === true ? 'task-done' : '')}
                                 title={todolist.title}

@@ -51,14 +51,14 @@ export default function TestApi(){
                         </div>
                     </div>
                     {!isLoading ?
-                        data?.todolist_app.map((item, i) => (
+                        data?.todolist_app.map((todolist, i) => (
                             <>
                                 <TaskList
-                                key={i}
-                                id={item.id}
+                                key={todolist.id}
+                                id={todolist.id}
                                 className="my-1"
-                                title={item.title}
-                                completed={item.completed}
+                                title={todolist.title}
+                                completed={todolist.completed}
                                 checkListHandler = {checkListHandler}
                                 deleteTaskHandler = {deleteTaskHandler}
                                 >
